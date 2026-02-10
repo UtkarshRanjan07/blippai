@@ -38,28 +38,23 @@ function HeroSection() {
             alt="BlippAI Logo"
             className="mx-auto h-28 w-auto mb-8 animate-fade-in"
           />
-          <h1 className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-foreground leading-tight mb-10">
+          <h1 className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-foreground leading-tight mb-6">
             The Intelligence Layer for{" "}
             <span className="text-gradient">Modern States & Organizations</span>
           </h1>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <p className="text-xl md:text-2xl text-muted-foreground font-medium mb-10">
+            Consider us your Chief AI Officer
+          </p>
+          <div className="flex justify-center">
             <Button
               asChild
               size="lg"
               className="bg-primary text-primary-foreground hover:bg-primary/90 text-base px-8"
             >
-              <Link to="/contact">
-                Talk to an Architect
+              <a href="https://blippai.com" target="_blank" rel="noopener noreferrer">
+                Talk to BlippAI
                 <ArrowRight className="ml-2 h-5 w-5" />
-              </Link>
-            </Button>
-            <Button
-              asChild
-              size="lg"
-              variant="outline"
-              className="border-border text-foreground hover:bg-secondary text-base px-8"
-            >
-              <Link to="/solutions">See How It Works</Link>
+              </a>
             </Button>
           </div>
         </div>

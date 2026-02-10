@@ -11,7 +11,6 @@ const navLinks = [
   { href: "/industries", label: "Industries" },
   { href: "/deployment", label: "Deployment & Security" },
   { href: "/about", label: "About" },
-  { href: "/contact", label: "Contact" },
 ];
 
 export function Navbar() {
@@ -38,8 +37,8 @@ export function Navbar() {
               key={link.href}
               to={link.href}
               className={`text-sm font-medium transition-colors hover:text-primary ${location.pathname === link.href
-                  ? "text-primary"
-                  : "text-muted-foreground"
+                ? "text-primary"
+                : "text-muted-foreground"
                 }`}
             >
               {link.label}
@@ -50,7 +49,7 @@ export function Navbar() {
         {/* Desktop CTA */}
         <div className="hidden lg:block">
           <Button asChild className="bg-primary text-primary-foreground hover:bg-primary/90">
-            <Link to="/contact">Talk to an Architect</Link>
+            <a href="https://blippai.com" target="_blank" rel="noopener noreferrer">Talk to BlippAI</a>
           </Button>
         </div>
 
@@ -69,17 +68,17 @@ export function Navbar() {
                   to={link.href}
                   onClick={() => setIsOpen(false)}
                   className={`text-lg font-medium transition-colors hover:text-primary ${location.pathname === link.href
-                      ? "text-primary"
-                      : "text-foreground"
+                    ? "text-primary"
+                    : "text-foreground"
                     }`}
                 >
                   {link.label}
                 </Link>
               ))}
               <Button asChild className="mt-4 bg-primary text-primary-foreground hover:bg-primary/90">
-                <Link to="/contact" onClick={() => setIsOpen(false)}>
-                  Talk to an Architect
-                </Link>
+                <a href="https://blippai.com" target="_blank" rel="noopener noreferrer" onClick={() => setIsOpen(false)}>
+                  Talk to BlippAI
+                </a>
               </Button>
             </div>
           </SheetContent>

@@ -14,8 +14,8 @@ interface CTASectionProps {
 export function CTASection({
   headline = "Bring reliable AI into your operations.",
   description,
-  primaryCTA = "Talk to an Architect",
-  primaryLink = "/contact",
+  primaryCTA = "Talk to BlippAI",
+  primaryLink = "https://blippai.com",
 }: CTASectionProps) {
   return (
     <section className="py-12 md:py-16 bg-gradient-to-b from-background to-secondary/20">
@@ -33,10 +33,17 @@ export function CTASection({
               size="lg"
               className="bg-primary text-primary-foreground hover:bg-primary/90"
             >
-              <Link to={primaryLink}>
-                {primaryCTA}
-                <ArrowRight className="ml-2 h-4 w-4" />
-              </Link>
+              {primaryLink.startsWith("http") ? (
+                <a href={primaryLink} target="_blank" rel="noopener noreferrer">
+                  {primaryCTA}
+                  <ArrowRight className="ml-2 h-4 w-4" />
+                </a>
+              ) : (
+                <Link to={primaryLink}>
+                  {primaryCTA}
+                  <ArrowRight className="ml-2 h-4 w-4" />
+                </Link>
+              )}
             </Button>
           </div>
         </div>
