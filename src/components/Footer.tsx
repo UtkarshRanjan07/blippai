@@ -7,10 +7,7 @@ const footerLinks = {
     { href: "/industries", label: "Industries" },
     { href: "/deployment", label: "Deployment & Security" },
   ],
-  company: [
-    { href: "/about", label: "About" },
-    { href: "/contact", label: "Contact" },
-  ],
+  company: [],
 };
 
 export function Footer() {
@@ -25,8 +22,8 @@ export function Footer() {
               <span className="text-xl font-semibold text-foreground">BlippAI</span>
             </Link>
             <p className="text-muted-foreground max-w-sm text-sm leading-relaxed">
-              The Intelligence Layer for Modern States & Organizations. 
-              BlippAI embeds AI directly into how organizations operate—integrated, 
+              The Intelligence Layer for Modern States & Organizations.
+              BlippAI embeds AI directly into how organizations operate—integrated,
               reliable, and deployable in real environments.
             </p>
           </div>
@@ -65,8 +62,8 @@ export function Footer() {
             </ul>
             <div className="mt-6">
               <p className="text-sm text-muted-foreground">
-                <a href="mailto:contact@blippai.com" className="hover:text-primary transition-colors">
-                  contact@blippai.com
+                <a href="mailto:hello@blippai.com" className="hover:text-primary transition-colors">
+                  hello@blippai.com
                 </a>
               </p>
             </div>
